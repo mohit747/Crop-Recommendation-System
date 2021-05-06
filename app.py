@@ -15,7 +15,7 @@ def hello_world():
 @app.route('/predict',methods=['POST','GET'])
 def predict():
     int_features=[int(x) for x in request.form.values()]
-    final=[np.array(int_features)]
+    final=np.array(int_features)
     print(int_features)
     print(final)
     output=model.predict_proba(final)
